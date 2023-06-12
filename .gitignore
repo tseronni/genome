@@ -13,9 +13,9 @@ ENV/
 .ipynb_checkpoints/
 
 # Arquivos de dados
-/data/raw/
-/data/processed/
-/data/external/
+/data/raw/*
+/data/processed/*
+/data/external/*
 
 # Resultados e arquivos gerados
 /reports/figures/
