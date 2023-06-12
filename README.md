@@ -6,9 +6,11 @@ GSER 2023 ranks the top 30 and 10 runner-up global ecosystems, and includes a to
 
 ## Developers
 
-- Leo Koki Shashiki ([LinkedIn](https://www.linkedin.com/in/leo-koki-shashiki/))
-- Rafael Costa ([LinkedIn](https://www.linkedin.com/in/rafael-costa-a642752b/))
-- Thiago Seronni Mendonça ([LinkedIn](https://www.linkedin.com/in/thiagoseronni/))
+- [Leo Koki Shashiki](https://github.com/leokoki) ([LinkedIn](https://www.linkedin.com/in/leo-koki-shashiki/))
+- [Rafael Costa](https://github.com/rqcmendes) ([LinkedIn](https://www.linkedin.com/in/rafael-costa-a642752b/))
+- [Thiago Seronni Mendonça](https://github.com/tseronni) ([LinkedIn](https://www.linkedin.com/in/thiagoseronni/))
+- [João Morossini](https://github.com/joaomorossini) ([LinkedIn](https://www.linkedin.com/in/joaomorossini/))
+- [Max Meneghini](https:https://github.com/maxmeneghini) ([LinkedIn](https://www.linkedin.com/))
 
 ## Folder Structure
 
