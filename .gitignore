@@ -22,7 +22,7 @@ ENV/
 /reports/results/
 
 # Arquivos de testes
-/tests/
+/tests/*
 
 # Outros arquivos e diretórios
 .DS_Store
