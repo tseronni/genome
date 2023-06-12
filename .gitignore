@@ -17,9 +17,6 @@ ENV/
 /data/processed/*
 /data/external/*
 
-# Resultados e arquivos gerados
-/reports/figures/*
-/reports/results/*
 
 # Arquivos de testes
 /tests/*
