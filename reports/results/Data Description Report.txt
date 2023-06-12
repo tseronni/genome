@@ -1,0 +1,33 @@
+What is the format of the data?
+Data is in CSV format
+
+Identify the method used to capture the data--for example, ODBC.
+The data provided was in csv extension and we are using pandas library to read it.
+
+How large is the database (in numbers of rows and columns)?
+There is 4 datasets:
+Abstract has 4.184.916 rows and 2 columns.
+List of companies has 4.236.726 rows and 4 columns.
+Raw patents has 9.830.924 rows and 17 columns.
+Table of applicants has 1.417.243 rows and 5 columns.
+
+Data Quality
+There is null values and duplicated rows.
+
+Does the data include characteristics relevant to the business question?
+Apparently they have all data needed to answer the questions
+
+What data types are present (symbolic, numeric, etc.)?
+All kind of data are present
+
+Did you compute basic statistics for the key attributes? What insight did this provide into the business question?
+
+Are you able to prioritize relevant attributes? If not, are business analysts available to provide further insight?
+
+
+What sort of hypotheses have you formed about the data?
+Which attributes seem promising for further analysis?
+Have your explorations revealed new characteristics about the data?
+How have these explorations changed your initial hypothesis?
+Can you identify particular subsets of data for later use?
+Take another look at your data mining goals. Has this exploration altered the goals?
