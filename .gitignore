@@ -1,0 +1,30 @@
+# Arquivos e diretórios específicos do Python
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Arquivos gerados pelo Jupyter Notebook
+.ipynb_checkpoints/
+
+# Arquivos de dados
+/data/raw/
+/data/processed/
+/data/external/
+
+# Resultados e arquivos gerados
+/reports/figures/
+/reports/results/
+
+# Arquivos de testes
+/tests/
+
+# Outros arquivos e diretórios
+.DS_Store
+.idea/
+*.log
