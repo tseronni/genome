@@ -18,8 +18,8 @@ ENV/
 /data/external/*
 
 # Resultados e arquivos gerados
-/reports/figures/
-/reports/results/
+/reports/figures/*
+/reports/results/*
 
 # Arquivos de testes
 /tests/*
