@@ -51,20 +51,20 @@ class Paths:
             # CREATE PARQUET IF NOT EXIST
             if not os.path.exists(self.raw_parquet_abstract):
                 logging.info('Creating abstract.parquet...')
-                df = pd.read_csv(self.raw_abstract)
+                df = pd.read_csv(self.raw_abstract, encoding='utf-8')
                 df.to_parquet(self.raw_parquet_abstract)
 
             if not os.path.exists(self.raw_parquet_list_of_companies):
                 logging.info('Creating ListOfCompanies.parquet...')
-                df = pd.read_csv(self.raw_list_of_companies)
+                df = pd.read_csv(self.raw_list_of_companies, encoding='utf-8')
                 df.to_parquet(self.raw_parquet_list_of_companies)
 
             if not os.path.exists(self.raw_parquet_raw_patents):
                 logging.info('Creating raw_patents.parquet...')
-                df = pd.read_csv(self.raw_raw_patents)
+                df = pd.read_csv(self.raw_raw_patents, encoding='utf-8')
                 df.to_parquet(self.raw_parquet_raw_patents)
 
             if not os.path.exists(self.raw_parquet_table_for_applicants):
                 logging.info('Creating table_for_applicants.parquet...')
-                df = pd.read_csv(self.raw_table_for_applicants)
+                df = pd.read_csv(self.raw_table_for_applicants, encoding='utf-8')
                 df.to_parquet(self.raw_parquet_table_for_applicants)

@@ -17,7 +17,6 @@ ENV/
 /data/processed/*
 /data/external/*
 
-
 # Arquivos de testes
 /tests/*
 

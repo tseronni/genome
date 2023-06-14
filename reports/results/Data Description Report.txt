@@ -5,11 +5,12 @@ Identify the method used to capture the data--for example, ODBC.
 The data provided was in csv extension and we are using pandas library to read it.
 
 How large is the database (in numbers of rows and columns)?
-There is 4 datasets:
+There is 5 datasets:
 Abstract has 4.184.916 rows and 2 columns.
 List of companies has 4.236.726 rows and 4 columns.
 Raw patents has 9.830.924 rows and 17 columns.
 Table of applicants has 1.417.243 rows and 5 columns.
+IPC Titles has 633 rows and 2 columns
 
 Data Quality
 There is null values and duplicated rows.
