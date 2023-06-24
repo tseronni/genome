@@ -41,12 +41,15 @@ class Paths:
             self.raw_raw_patents = os.path.join(self.data_raw, 'raw_patents.csv')
             self.raw_table_for_applicants = os.path.join(self.data_raw, 'table_for_applicants.csv')
             self.raw_ipc_titles = os.path.join(self.data_raw, 'IPC Titles.xlsx')
+            self.raw_cities_500 = os.path.join(self.data_raw, 'cities500.txt')
 
             # RAW PARQUET DATA PATHS
             self.raw_parquet_abstract = os.path.join(self.data_raw, 'abstract.parquet')
             self.raw_parquet_list_of_companies = os.path.join(self.data_raw, 'ListOfCompanies.parquet')
             self.raw_parquet_raw_patents = os.path.join(self.data_raw, 'raw_patents.parquet')
             self.raw_parquet_table_for_applicants = os.path.join(self.data_raw, 'table_for_applicants.parquet')
+
+            self.processed_cities_500 = os.path.join(self.data_processed, 'cities500.csv')
 
             # CREATE PARQUET IF NOT EXIST
             if not os.path.exists(self.raw_parquet_abstract):
@@ -68,3 +71,19 @@ class Paths:
                 logging.info('Creating table_for_applicants.parquet...')
                 df = pd.read_csv(self.raw_table_for_applicants, encoding='utf-8')
                 df.to_parquet(self.raw_parquet_table_for_applicants)
+
+            if not os.path.exists(self.processed_cities_500):
+
+                if not os.path.exists(self.raw_cities_500):
+                    logging.error('cities500.txt not found. Download the cities zip from http://download.geonames.org/export/dump/cities500.zip and extract content to data\raw folder')
+                else:
+                    logging.info('Creating cities500.csv')
+                    # http://download.geonames.org/export/dump/readme.txt
+                    # http://download.geonames.org/export/dump/cities500.zip
+
+                    column_names = ['geonameid', 'name', 'asciiname', 'alternatenames', 'latitude', 'longitude',
+                                    'feature class', 'feature code', 'country code', 'cc2', 'admin1 code', 'admin2 code', 'admin3 code',
+                                    'admin4 code', 'population', 'elevation', 'dem', 'timezone', 'modification date']
+
+                    df_cities_500 = pd.read_csv(self.raw_cities_500, sep='\t', encoding='utf-8', names=column_names, header=0, dtype={13: str, 14: str})
+                    df_cities_500.to_csv(self.processed_cities_500, index=False)
