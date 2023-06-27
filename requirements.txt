@@ -5,3 +5,4 @@ pyarrow
 openpyxl
 bokeh
 xyzservices
+bokeh
