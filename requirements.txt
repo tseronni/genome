@@ -3,6 +3,6 @@ pandas~=2.0.2
 matplotlib
 pyarrow
 openpyxl
-bokeh
+bokeh~=3.2.0
 xyzservices
 bokeh
