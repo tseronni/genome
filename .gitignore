@@ -12,12 +12,12 @@ ENV/
 # Arquivos gerados pelo Jupyter Notebook
 .ipynb_checkpoints/
 
+!/data/processed/description_subsector.json
+
 # Arquivos de dados
 /data/raw/*
 /data/processed/*
 /data/external/*
-
-!/data/processed/description_subsector.json
 
 # Arquivos de testes
 /tests/*
