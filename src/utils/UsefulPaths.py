@@ -35,6 +35,9 @@ class Paths:
             self.data_processed = os.path.join(self.root_dir, os.path.join('data', 'processed'))
             self.data_external = os.path.join(self.root_dir, os.path.join('data', 'external'))
 
+            # PROCESSED JSON's
+            self.json_subsectors = os.path.join(self.data_processed, 'description_subsector.json')
+
             # RAW DATA PATHS
             self.raw_abstract = os.path.join(self.data_raw, 'abstract.csv')
             self.raw_list_of_companies = os.path.join(self.data_raw, 'ListOfCompanies.csv')

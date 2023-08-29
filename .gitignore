@@ -17,6 +17,8 @@ ENV/
 /data/processed/*
 /data/external/*
 
+!/data/processed/description_subsector.json
+
 # Arquivos de testes
 /tests/*
 
