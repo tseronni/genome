@@ -55,7 +55,7 @@ class Paths:
                 df.to_parquet(self.raw_parquet_abstract)
 
             if not os.path.exists(self.raw_parquet_list_of_companies):
-                logging.info('Creating ListOfCompanies.parquet...')
+                logging.info('Creating ListOfCompanies.p    arquet...')
                 df = pd.read_csv(self.raw_list_of_companies, encoding='utf-8')
                 df.to_parquet(self.raw_parquet_list_of_companies)
 
