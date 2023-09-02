@@ -41,6 +41,8 @@ class Paths:
             # PROCESSED PATHS
             self.ipc_subsetor_hypothesis = os.path.join(self.data_processed, 'ipc_subsetor_hypothesis.csv')
             self.processed_raw_patents = os.path.join(self.data_processed, 'raw_patents.csv')
+            self.processed_abstract_target = os.path.join(self.data_processed, 'abstract_target.csv')
+            self.processed_abstract_result = os.path.join(self.data_processed, 'abstract_result.xlsx')
 
             # RAW DATA PATHS
             self.raw_abstract = os.path.join(self.data_raw, 'abstract.csv')
