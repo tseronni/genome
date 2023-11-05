@@ -9,3 +9,4 @@ bokeh
 unidecode
 sentence-transformers
 seaborn
+spacy

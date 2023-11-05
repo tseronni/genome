@@ -49,6 +49,8 @@ pip install -r requirements.txt
 
 - Atenção: Não é necessário criar o arquivo parquet dos csv pois será criado automático.
 
+- Digitar no terminal: python -m spacy download en_core_web_sm (instalação do modelo de linguagem inglês)
+
 ## Uso
 
 Exemplos de uso do projeto.
