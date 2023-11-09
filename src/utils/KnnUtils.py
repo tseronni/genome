@@ -21,13 +21,13 @@ class OptimalCluster:
         self.n_cluster_min = n_cluster_min
         self.n_cluster_max = n_cluster_max
         self.random_state = random_state
-        self.all_kmeans = []
+        self.all_knns = []
         self.x_labels = range(self.n_cluster_min, self.n_cluster_max + 1)
 
         for n in range(self.n_cluster_min, self.n_cluster_max + 1):
             kmeans = KMeans(n_clusters=n, random_state=self.random_state, n_init=self.n_cluster_max)
             kmeans.fit(X=data)
-            self.all_kmeans.append(kmeans)
+            self.all_knns.append(kmeans)
 
         self.sum_of_squares = self.calculate_wcss()
         self.k_elbow_best, self.k_elbow_best_index = self.elbow_optimal_number_of_clusters(self.sum_of_squares)
@@ -37,8 +37,8 @@ class OptimalCluster:
         print(f'Optimal k for elbow method: {self.k_elbow_best}')
         print(f'Optimal k for silhouette method: {self.k_silhouette_best}')
 
-    def get_kmeans(self, k=2):
-        return self.all_kmeans[k - self.n_cluster_min]
+    def get_specific_knn(self, k=2):
+        return self.all_knns[k - self.n_cluster_min]
 
     def plot_pca_best_distributions(self):
         self.plot_pca_cluster_distribution(k=self.k_elbow_best)
@@ -53,8 +53,8 @@ class OptimalCluster:
         """
 
         wcss = []
-        for n in range(0, len(self.all_kmeans)):
-            kmeans = self.all_kmeans[n]
+        for n in range(0, len(self.all_knns)):
+            kmeans = self.all_knns[n]
             wcss.append(kmeans.inertia_)
 
         return wcss
@@ -86,8 +86,8 @@ class OptimalCluster:
 
         silhouette = []
 
-        for i in range(0, len(self.all_kmeans)):
-            kmeans = self.all_kmeans[i]
+        for i in range(0, len(self.all_knns)):
+            kmeans = self.all_knns[i]
             silhouette.append(silhouette_score(self.data,
                                                kmeans.labels_,
                                                metric='euclidean'))
@@ -130,7 +130,7 @@ class OptimalCluster:
         pca_df = pd.DataFrame(pca_result, columns=['PC1', 'PC2'])
 
         k_index = k - self.n_cluster_min
-        kmeans_model = self.all_kmeans[k_index]
+        kmeans_model = self.all_knns[k_index]
         kmeans_model.fit(pca_result)
 
         pca_df['cluster'] = kmeans_model.labels_
